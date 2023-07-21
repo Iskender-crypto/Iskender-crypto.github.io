@@ -171,14 +171,14 @@ const items = ref([
     value: "bar30"
   }
 ]);
-const update = (itemName)=>{
+const update = (itemName:string)=>{
   visible.value = true;
   const findedModel = items.value.find((el)=>{
     return el.name===itemName}
   )
   Object.assign(model.value,findedModel)
 }
-const save = (modelName)=>{
+const save = (modelName:string)=>{
 
   const updateModel = items.value.find((el)=>{
     return el.name===modelName}
