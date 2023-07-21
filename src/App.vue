@@ -27,7 +27,7 @@
     </template>
   </Dialog>
 </template>
-<script setup lang="ts">
+<script setup lang="js">
 import { ref} from "vue";
 const visible = ref(false);
 const model = ref({
@@ -171,14 +171,14 @@ const items = ref([
     value: "bar30"
   }
 ]);
-const update = (itemName:string)=>{
+const update = (itemName)=>{
   visible.value = true;
   const findedModel = items.value.find((el)=>{
     return el.name===itemName}
   )
   Object.assign(model.value,findedModel)
 }
-const save = (modelName:any)=>{
+const save = (modelName)=>{
 
   const updateModel = items.value.find((el)=>{
     return el.name===modelName}
