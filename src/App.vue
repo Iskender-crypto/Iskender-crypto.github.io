@@ -178,7 +178,7 @@ const update = (itemName:string)=>{
   )
   Object.assign(model.value,findedModel)
 }
-const save = (modelName)=>{
+const save = (modelName:any)=>{
 
   const updateModel = items.value.find((el)=>{
     return el.name===modelName}
