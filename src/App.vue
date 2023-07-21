@@ -28,7 +28,7 @@
   </Dialog>
 </template>
 <script setup lang="ts">
-import {Ref, ref} from "vue";
+import { ref} from "vue";
 interface Imodel{
   name: string,
   value: string
