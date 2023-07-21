@@ -27,7 +27,7 @@
     </template>
   </Dialog>
 </template>
-<script setup lang="js">
+<script setup>
 import { ref} from "vue";
 const visible = ref(false);
 const model = ref({
