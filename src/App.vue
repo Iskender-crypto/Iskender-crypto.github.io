@@ -34,15 +34,15 @@ interface Imodel{
   value: string
 }
 const visible = ref(false);
-const model = ref<Imodel | undefined>({
+const model = ref<Imodel | any>({
   name:'',
   value:''
 })
-const findedModel = ref<Imodel | undefined>({
+const findedModel = ref<Imodel | any>({
   name:'',
   value:''
 })
-const updateModel = ref<Imodel | undefined>({
+const updateModel = ref<Imodel | any>({
   name:'',
   value:''
 })
