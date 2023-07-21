@@ -28,9 +28,21 @@
   </Dialog>
 </template>
 <script setup lang="ts">
-import { ref} from "vue";
+import {Ref, ref} from "vue";
+interface Imodel{
+  name: string,
+  value: string
+}
 const visible = ref(false);
-const model = ref({
+const model = ref<Imodel>({
+  name:'',
+  value:''
+})
+const findedModel = ref<Imodel>({
+  name:'',
+  value:''
+})
+const updateModel = ref<Imodel>({
   name:'',
   value:''
 })
@@ -173,18 +185,18 @@ const items = ref([
 ]);
 const update = (itemName:string)=>{
   visible.value = true;
-  const findedModel = items.value.find((el)=>{
+  findedModel.value = items.value.find((el)=>{
     return el.name===itemName}
   )
-  Object.assign(model.value,findedModel)
+  Object.assign(model.value,findedModel.value)
 }
 const save = (modelName:string)=>{
 
-  const updateModel = items.value.find((el)=>{
+  updateModel.value = items.value.find((el)=>{
     return el.name===modelName}
   )
 
-  Object.assign(updateModel, model.value)
+  Object.assign(updateModel.value, model.value)
   visible.value = false
 }
 </script>
